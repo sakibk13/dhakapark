@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Sign Up</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="auth-body">
+
+  <header class="navbar auth-navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html#how-it-works">How it Works</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <div class="auth-wrapper">
+    <div class="auth-card reveal active">
+      <h1>Create Account</h1>
+      <p>Sign up to activate plans, track receipts, and get support faster.</p>
+
+      <form class="auth-form">
+        <div class="two-col">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="First name">
+          </div>
+
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" placeholder="+880 1712 345 678">
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Create password">
+        </div>
+
+        <button type="submit" class="btn btn-primary full-btn">Create Account</button>
+      </form>
+
+      <p class="auth-bottom">Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

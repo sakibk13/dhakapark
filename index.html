@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Smart Parking in Dhaka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#how-it-works">How it Works</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content reveal">
+      <span class="hero-badge">Now across 12 locations in Dhaka</span>
+      <h1>Parking in Dhaka, <span>Simplified.</span></h1>
+      <p>Find spots instantly, check prices, subscribe monthly, and skip the queues.</p>
+
+      <div class="search-box">
+        <svg class="search-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <input type="text" id="mapSearchInput" placeholder="Search area e.g. Banani, Uttara, Motijheel" />
+        <button id="mapSearchBtn" class="btn btn-primary search-btn">Find Parking</button>
+      </div>
+
+      <div class="popular-tags">
+        <span>Gulshan</span>
+        <span>Banani</span>
+        <span>Dhanmondi</span>
+        <span>Uttara</span>
+        <span>Mohammadpur</span>
+        <span>Tejgaon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="features section">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-badge">Why DhakaPark</span>
+        <h2>Everything you need for stress-free parking</h2>
+        <p>Built to solve long queues, unclear availability, manual payment issues, and poor customer support.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">📍</div>
+          <h3>Live Location Search</h3>
+          <p>Find available parking by area and compare site details before you drive.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">💳</div>
+          <h3>Digital Payment Ready</h3>
+          <p>Reduce billing disputes with clearer charges, receipts, and payment confirmation.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">📅</div>
+          <h3>Monthly Subscriptions</h3>
+          <p>Choose flexible plans for individuals, office workers, residents, and corporate teams.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">🛟</div>
+          <h3>Fast Support</h3>
+          <p>Submit complaints, upload proof, and track issues with a structured support process.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how section" id="how-it-works">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-badge">How It Works</span>
+        <h2>Book, Park, Pay — in a few simple steps</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-number">01</span>
+          <h3>Search Location</h3>
+          <p>Select your desired area and check which parking sites have available spaces.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <span class="step-number">02</span>
+          <h3>Choose a Site</h3>
+          <p>Compare availability, site type, and parking charges before selecting a location.</p>
+        </div>
+
+        <div class="step-card reveal">
+          <span class="step-number">03</span>
+          <h3>Park with Confidence</h3>
+          <p>Use subscription access or standard parking and receive clear digital records.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stats section">
+    <div class="container stats-grid">
+      <div class="stat-card reveal">
+        <h3>12+</h3>
+        <p>Parking locations</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3>24/7</h3>
+        <p>Selected site access</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3>3 Types</h3>
+        <p>Walk-in, subscriber, corporate</p>
+      </div>
+      <div class="stat-card reveal">
+        <h3>Real-Time</h3>
+        <p>Availability visibility</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="map section" id="map">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-badge">Coverage</span>
+        <h2>Find Us on the Map</h2>
+        <p>Explore our 12 parking locations across Dhaka city.</p>
+      </div>
+      <div class="map-panel reveal">
+        <div class="map-toolbar">
+          <span style="display: flex; align-items: center; gap: 8px;"><div class="map-dot blue-status"></div> Available</span>
+          <span style="display: flex; align-items: center; gap: 8px;"><div class="map-dot yellow"></div> Limited</span>
+          <span style="display: flex; align-items: center; gap: 8px;"><div class="map-dot red"></div> Full</span>
+        </div>
+        <div class="fake-map">
+          <div class="map-grid"></div>
+          
+          <div class="map-marker marker-a" style="top: 35%; left: 55%;">
+            <span>P</span>
+            <div class="map-label">Gulshan-1 (Available)</div>
+          </div>
+          
+          <div class="map-marker marker-b" style="top: 30%; left: 45%;">
+            <span>P</span>
+            <div class="map-label">Banani (Limited)</div>
+          </div>
+          
+          <div class="map-marker marker-c" style="top: 55%; left: 35%;">
+            <span>P</span>
+            <div class="map-label">Dhanmondi (Full)</div>
+          </div>
+          
+          <div class="map-marker marker-a" style="top: 75%; left: 60%;">
+            <span>P</span>
+            <div class="map-label">Motijheel (Available)</div>
+          </div>
+
+          <div class="map-marker marker-a" style="top: 10%; left: 15%;">
+            <span>P</span>
+            <div class="map-label">Uttara (Available)</div>
+          </div>
+
+          <div class="map-marker marker-b" style="bottom: 15%; right: 35%;">
+            <span>P</span>
+            <div class="map-label">Mirpur (Limited)</div>
+          </div>
+
+          <div class="map-marker marker-c" style="top: 40%; left: 50%;">
+            <span>P</span>
+            <div class="map-label">Farmgate (Full)</div>
+          </div>
+
+          <div class="map-marker marker-a" style="top: 60%; left: 20%;">
+            <span>P</span>
+            <div class="map-label">Mohammadpur (Available)</div>
+          </div>
+
+          <div class="map-marker marker-b" style="top: 52%; left: 58%;">
+            <span>P</span>
+            <div class="map-label">Tejgaon (Limited)</div>
+          </div>
+
+          <div class="map-marker marker-a" style="top: 62%; left: 52%;">
+            <span>P</span>
+            <div class="map-label">Mogbazar (Available)</div>
+          </div>
+
+          <div class="map-marker marker-c" style="top: 45%; left: 65%;">
+            <span>P</span>
+            <div class="map-label">Badda (Full)</div>
+          </div>
+
+          <div class="map-marker marker-a" style="top: 65%; left: 68%;">
+            <span>P</span>
+            <div class="map-label">Malibagh (Available)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta section">
+    <div class="container cta-box reveal">
+      <div>
+        <h2>Ready to park smarter?</h2>
+        <p>Explore parking locations, monthly plans, and support options with DhakaPark.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="locations.html" class="btn btn-primary">Explore Locations</a>
+        <a href="subscriptions.html" class="btn btn-outline">View Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DhakaPark</h3>
+        <p>Integrated Parking Information System prototype for smarter multi-site parking in Dhaka.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html">Support</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <p>Tejgaon, Dhaka</p>
+        <p>support@dhakapark.com</p>
+        <p>+880 1712 345 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DhakaPark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

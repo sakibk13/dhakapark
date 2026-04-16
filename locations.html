@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Detailed Locations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .parking-card {
+      padding: 12px 20px !important;
+      margin-bottom: 20px;
+    }
+    .location-details {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px dashed var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 10px;
+      font-size: 0.82rem;
+    }
+    .detail-item {
+      display: flex;
+      flex-direction: column;
+    }
+    .detail-label {
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-size: 0.7rem;
+      letter-spacing: 0.5px;
+    }
+    .detail-value {
+      color: var(--dark);
+      font-weight: 600;
+    }
+    .facilities-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    .facility-tag {
+      background: #f0f7ff;
+      color: var(--primary);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border: 1px solid #d0e3ff;
+    }
+    .price-table {
+      grid-column: span 2;
+      background: #f8fbff;
+      padding: 10px;
+      border-radius: 8px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="locations.html" class="active-link">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html">Support</a>
+        <a href="dashboard.html">Management</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="inner-hero small-hero">
+    <div class="container reveal active">
+      <span class="section-badge">Multi-Site Network</span>
+      <h1>Explore Our 12 Locations</h1>
+      <p>Detailed site info, staffing, and specialized pricing for Dhaka's premier parking network.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container locations-layout">
+      <div class="locations-sidebar reveal active">
+        <div class="filter-card">
+          <input type="text" id="locationFilter" placeholder="Search by area (e.g. Uttara, Mirpur, Gulshan)" class="full-input">
+        </div>
+
+        <!-- Location 1: Gulshan -->
+        <div class="parking-card available" data-area="gulshan">
+          <div class="parking-card-top">
+            <h3>Gulshan Plaza Tower</h3>
+            <span class="status available-badge">Available</span>
+          </div>
+          <p>Gulshan-2, Dhaka | <strong>Multi-level Structure</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Rahim Ahmed</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Total Capacity</span>
+              <span class="detail-value">250 Vehicles</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 80/hr</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+                <span>Monthly Subscriber</span>
+                <strong>BDT 12,000/mo</strong>
+              </div>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">Facilities</span>
+              <div class="facilities-tags">
+                <span class="facility-tag">24/7 CCTV</span>
+                <span class="facility-tag">Fire Safety</span>
+                <span class="facility-tag">EV Charging</span>
+                <span class="facility-tag">Lift Access</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+        <!-- Location 2: Banani -->
+        <div class="parking-card limited" data-area="banani">
+          <div class="parking-card-top">
+            <h3>Banani Corporate Hub</h3>
+            <span class="status limited-badge">Limited</span>
+          </div>
+          <p>Banani Road 11 | <strong>Basement/Covered</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Farhana Kabir</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Security Team</span>
+              <span class="detail-value">4 Guards/Shift</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 70/hr</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+                <span>Corporate Block</span>
+                <strong>Contact Sales</strong>
+              </div>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">Features</span>
+              <div class="facilities-tags">
+                <span class="facility-tag">Digital Entry</span>
+                <span class="facility-tag">Height: 2.5m</span>
+                <span class="facility-tag">Subscribers Only Zone</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+        <!-- Location 3: Uttara -->
+        <div class="parking-card available" data-area="uttara">
+          <div class="parking-card-top">
+            <h3>Uttara North Lot</h3>
+            <span class="status available-badge">Available</span>
+          </div>
+          <p>Sector 7, Uttara | <strong>Open-air Lot</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Kariem Ullah</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Current Status</span>
+              <span class="detail-value">80 Spots Free</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 40/hr</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+                <span>Monthly Subscriber</span>
+                <strong>BDT 6,000/mo</strong>
+              </div>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">Facilities</span>
+              <div class="facilities-tags">
+                <span class="facility-tag">Flood Lights</span>
+                <span class="facility-tag">Wide Entry</span>
+                <span class="facility-tag">Car Wash (Paid)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+        <!-- Location 4: Motijheel -->
+        <div class="parking-card full" data-area="motijheel">
+          <div class="parking-card-top">
+            <h3>Motijheel Business Center</h3>
+            <span class="status full-badge">Full</span>
+          </div>
+          <p>Motijheel C/A | <strong>Multi-level Structure</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">S.M. Rashid</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Wait Time</span>
+              <span class="detail-value">~20 Mins</span>
+            </div>
+            <div class="price-table" style="background: #fff0f0;">
+              <div style="display: flex; justify-content: space-between; color: #c0392b;">
+                <span>Event Rate (Active)</span>
+                <strong>BDT 100/hr</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+                <span>Standard Rate</span>
+                <strong>BDT 60/hr</strong>
+              </div>
+            </div>
+            <div class="detail-item" style="grid-column: span 2;">
+              <span class="detail-label">Note</span>
+              <p style="font-size: 0.75rem; color: #c0392b;">Busy due to weekend fair nearby. Multi-level access limited to monthly subscribers only for the next 2 hours.</p>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="#" class="btn btn-outline-blue">Notify Me</a>
+          </div>
+        </div>
+
+        <!-- Location 5: Dhanmondi -->
+        <div class="parking-card available" data-area="dhanmondi">
+          <div class="parking-card-top">
+            <h3>Dhanmondi 27 Lot</h3>
+            <span class="status available-badge">Available</span>
+          </div>
+          <p>Dhanmondi, Dhaka | <strong>Open-air Lot</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Akram Khan</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Capacity</span>
+              <span class="detail-value">120 Vehicles</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 50/hr</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-top: 4px;">
+                <span>Monthly Subscriber</span>
+                <strong>BDT 8,000/mo</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+        <!-- Location 6: Mohammadpur -->
+        <div class="parking-card available" data-area="mohammadpur">
+          <div class="parking-card-top">
+            <h3>Mohammadpur Town Lot</h3>
+            <span class="status available-badge">Available</span>
+          </div>
+          <p>Town Hall Area | <strong>Open-air Lot</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Mehedi Hasan</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Note</span>
+              <span class="detail-value">Large Vehicle Friendly</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 40/hr</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+        <!-- Location 7: Tejgaon -->
+        <div class="parking-card limited" data-area="tejgaon">
+          <div class="parking-card-top">
+            <h3>Tejgaon Industrial Site</h3>
+            <span class="status limited-badge">Limited</span>
+          </div>
+          <p>Near Head Office | <strong>Basement/Covered</strong></p>
+          
+          <div class="location-details">
+            <div class="detail-item">
+              <span class="detail-label">Site Supervisor</span>
+              <span class="detail-value">Joynal Abedin</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Security</span>
+              <span class="detail-value">High Security</span>
+            </div>
+            <div class="price-table">
+              <div style="display: flex; justify-content: space-between;">
+                <span>Walk-in (Short term)</span>
+                <strong>BDT 60/hr</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">Navigate</a>
+            <a href="receipt.html" class="btn btn-outline-blue">Get Token</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="map-panel reveal active">
+        <div class="map-toolbar">
+          <div class="map-dot blue-status"></div><span>Available</span>
+          <div class="map-dot yellow"></div><span>Limited</span>
+          <div class="map-dot red"></div><span>Full</span>
+        </div>
+
+        <div class="fake-map">
+          <div class="map-grid"></div>
+
+          <div class="map-marker marker-a" style="top: 25%; left: 35%;">
+            <span>G</span>
+            <div class="map-label">Gulshan<br>Multi-level</div>
+          </div>
+
+          <div class="map-marker marker-b" style="top: 15%; right: 25%;">
+            <span>B</span>
+            <div class="map-label">Banani<br>Basement</div>
+          </div>
+
+          <div class="map-marker marker-c" style="bottom: 30%; left: 20%;">
+            <span>U</span>
+            <div class="map-label">Uttara<br>Open-air</div>
+          </div>
+
+          <div class="map-marker marker-d" style="top: 50%; right: 15%;">
+            <span>M</span>
+            <div class="map-label">Motijheel<br>Full</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DhakaPark</h3>
+        <p>Providing safe and organized parking solutions across 12 high-demand zones in Dhaka.</p>
+        <p><strong>Head Office:</strong> Tejgaon, Dhaka</p>
+      </div>
+      <div>
+        <h4>Customer Portals</h4>
+        <a href="login.html">Subscriber Login</a>
+        <a href="dashboard.html">Admin Dashboard</a>
+        <a href="support.html">Incident Reporting</a>
+      </div>
+      <div>
+        <h4>Core Assets</h4>
+        <p>• 12 Strategic Locations</p>
+        <p>• Digital Audit System</p>
+        <p>• 24/7 Security Presence</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DhakaPark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

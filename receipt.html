@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Digital Receipts</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html">Support</a>
+        <a href="receipt.html" class="active-link">Receipts</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="inner-hero small-hero">
+    <div class="container reveal">
+      <span class="section-badge">Digital Records</span>
+      <h1>Digital Receipts</h1>
+      <p>Track recent parking transactions, payment history, and download receipt records.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="receipt-toolbar reveal">
+        <input type="text" placeholder="Search by receipt ID or location" class="full-input">
+        <select class="toolbar-select" id="receiptTypeFilter">
+          <option value="all">All Transactions</option>
+          <option value="walk-in">Walk-in Parking</option>
+          <option value="subscription">Subscription</option>
+          <option value="corporate">Corporate</option>
+        </select>
+      </div>
+
+      <div class="receipt-grid" id="receiptGrid">
+        <div class="receipt-card reveal" data-type="walk-in">
+          <div class="receipt-header">
+            <h3>Receipt #DPK-10231</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Walk-in Parking</p>
+          <p><strong>Location:</strong> Gulshan-2 (Multi-level)</p>
+          <p><strong>Date:</strong> 14 April 2026</p>
+          <p><strong>Vehicle:</strong> Dhaka Metro-Ga 12-3456</p>
+          <p><strong>Duration:</strong> 2 hrs 20 min</p>
+          <p><strong>Amount:</strong> BDT 160</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <div class="receipt-card reveal" data-type="walk-in">
+          <div class="receipt-header">
+            <h3>Receipt #DPK-10210</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Walk-in Parking</p>
+          <p><strong>Location:</strong> Uttara Sector 7 (Open-air)</p>
+          <p><strong>Date:</strong> 12 April 2026</p>
+          <p><strong>Vehicle:</strong> Dhaka Metro-Kha 34-8751</p>
+          <p><strong>Duration:</strong> 1 hr 50 min</p>
+          <p><strong>Amount:</strong> BDT 80</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <div class="receipt-card reveal" data-type="subscription">
+          <div class="receipt-header">
+            <h3>Receipt #SUB-90811</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Subscription Renewal</p>
+          <p><strong>Plan:</strong> Premium Monthly Plan</p>
+          <p><strong>Billing Date:</strong> 01 April 2026</p>
+          <p><strong>Primary Location:</strong> Motijheel C/A</p>
+          <p><strong>Member:</strong> User Account</p>
+          <p><strong>Amount:</strong> BDT 10,000</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <!-- More Walk-in -->
+        <div class="receipt-card reveal" data-type="walk-in">
+          <div class="receipt-header">
+            <h3>Receipt #DPK-10195</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Walk-in Parking</p>
+          <p><strong>Location:</strong> Mohammadpur (Open-air)</p>
+          <p><strong>Date:</strong> 10 April 2026</p>
+          <p><strong>Vehicle:</strong> Dhaka Metro-Ga 12-3456</p>
+          <p><strong>Duration:</strong> 45 min</p>
+          <p><strong>Amount:</strong> BDT 40</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <!-- Subscription -->
+        <div class="receipt-card reveal" data-type="subscription">
+          <div class="receipt-header">
+            <h3>Receipt #SUB-89210</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Subscription Renewal</p>
+          <p><strong>Plan:</strong> Standard Monthly Plan</p>
+          <p><strong>Billing Date:</strong> 15 March 2026</p>
+          <p><strong>Primary Location:</strong> Banani Road 11</p>
+          <p><strong>Member:</strong> User Account</p>
+          <p><strong>Amount:</strong> BDT 6,000</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <!-- Corporate -->
+        <div class="receipt-card reveal" data-type="corporate">
+          <div class="receipt-header">
+            <h3>Receipt #CORP-4451</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Corporate Group Billing</p>
+          <p><strong>Company:</strong> Tech Solutions Ltd.</p>
+          <p><strong>Billing Period:</strong> March 2026</p>
+          <p><strong>Location:</strong> Tejgaon (Basement)</p>
+          <p><strong>Vehicles:</strong> 5 Registered</p>
+          <p><strong>Amount:</strong> BDT 15,400</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+
+        <div class="receipt-card reveal" data-type="corporate">
+          <div class="receipt-header">
+            <h3>Receipt #CORP-4320</h3>
+            <span class="paid-badge">Paid</span>
+          </div>
+          <p><strong>Type:</strong> Corporate Group Billing</p>
+          <p><strong>Company:</strong> Tech Solutions Ltd.</p>
+          <p><strong>Billing Period:</strong> February 2026</p>
+          <p><strong>Location:</strong> Tejgaon (Basement)</p>
+          <p><strong>Vehicles:</strong> 5 Registered</p>
+          <p><strong>Amount:</strong> BDT 12,800</p>
+          <div class="card-actions">
+            <a href="#" class="btn btn-blue">View</a>
+            <a href="#" class="btn btn-outline-blue">Download PDF</a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DhakaPark</h3>
+        <p>Digital receipts reduce confusion, make payment history easier to track, and support complaint resolution.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="support.html">Support</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>support@dhakapark.com</p>
+        <p>+880 1712 345 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DhakaPark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Management Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .dash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+    .chart-box {
+      background: var(--white);
+      padding: 24px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .chart-placeholder {
+      height: 200px;
+      background: #f0f7ff;
+      border-radius: 12px;
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      padding: 20px;
+      margin-top: 15px;
+    }
+    .bar {
+      flex: 1;
+      background: var(--primary);
+      border-radius: 4px 4px 0 0;
+      transition: 0.3s;
+    }
+    .bar:hover { background: var(--secondary); }
+    .table-container {
+      margin-top: 30px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: #f8fbff; font-weight: 700; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="dashboard.html" class="active-link">Management</a>
+      </nav>
+      <div class="nav-actions">
+        <span class="status available-badge">Admin: Tejgaon HQ</span>
+      </div>
+    </div>
+  </header>
+
+  <section class="inner-hero small-hero">
+    <div class="container reveal active">
+      <span class="section-badge">Executive Support System (ESS)</span>
+      <h1>Management Dashboard</h1>
+      <p>Real-time performance metrics, revenue analysis, and occupancy trends across all 12 sites.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <h3>BDT 45,200</h3>
+          <p>Total Revenue (Today)</p>
+        </div>
+        <div class="stat-card">
+          <h3>84%</h3>
+          <p>Avg. Occupancy</p>
+        </div>
+        <div class="stat-card">
+          <h3>1,240</h3>
+          <p>Total Vehicles Today</p>
+        </div>
+        <div class="stat-card">
+          <h3>15</h3>
+          <p>Active Incidents</p>
+        </div>
+      </div>
+
+      <div class="dash-grid">
+        <div class="chart-box">
+          <h3>Revenue by Location (Last 7 Days)</h3>
+          <div class="chart-placeholder">
+            <div class="bar" style="height: 60%;"></div>
+            <div class="bar" style="height: 80%;"></div>
+            <div class="bar" style="height: 45%;"></div>
+            <div class="bar" style="height: 95%;"></div>
+            <div class="bar" style="height: 70%;"></div>
+          </div>
+          <p class="small-text" style="margin-top: 10px; text-align: center;">Gulshan | Banani | Dhanmondi | Motijheel | Uttara</p>
+        </div>
+
+        <div class="chart-box">
+          <h3>Occupancy Analysis (Peak Hours)</h3>
+          <div class="chart-placeholder">
+            <div class="bar" style="height: 30%; background: #c8d8eb;"></div>
+            <div class="bar" style="height: 50%; background: #c8d8eb;"></div>
+            <div class="bar" style="height: 90%; background: #ff5353;"></div>
+            <div class="bar" style="height: 85%; background: #ff5353;"></div>
+            <div class="bar" style="height: 40%; background: #c8d8eb;"></div>
+          </div>
+          <p class="small-text" style="margin-top: 10px; text-align: center;">8 AM | 11 AM | 2 PM | 5 PM | 8 PM</p>
+        </div>
+      </div>
+
+      <div class="table-container chart-box">
+        <h3>Site-to-Site Comparison (MIS Report)</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Site Name</th>
+              <th>Type</th>
+              <th>Total Capacity</th>
+              <th>Revenue (Daily)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Gulshan Plaza</td>
+              <td>Multi-level</td>
+              <td>250</td>
+              <td>BDT 12,500</td>
+              <td><span class="status available-badge">Optimal</span></td>
+            </tr>
+            <tr>
+              <td>Banani Hub</td>
+              <td>Basement</td>
+              <td>100</td>
+              <td>BDT 8,200</td>
+              <td><span class="status limited-badge">High Demand</span></td>
+            </tr>
+            <tr>
+              <td>Dhanmondi Lake</td>
+              <td>Open-air</td>
+              <td>60</td>
+              <td>BDT 4,500</td>
+              <td><span class="status available-badge">Stable</span></td>
+            </tr>
+            <tr>
+              <td>Motijheel C/A</td>
+              <td>Multi-level</td>
+              <td>300</td>
+              <td>BDT 15,000</td>
+              <td><span class="status full-badge">Event Load</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 DhakaPark Management System. Confidential HQ Access.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

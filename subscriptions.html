@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Activate Subscription</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    
+    /* Specific layout for the two-column subscription page */
+    .plans-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .form-column {
+      position: sticky;
+      top: 100px;
+    }
+    .plan-card.compact {
+      padding: 22px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: 0.3s;
+    }
+    .plan-card.compact.selected {
+      border-color: var(--primary);
+      background: #f0f7ff;
+    }
+    .plan-card.compact h3 {
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+    .plan-card.compact .price {
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html" class="active-link">Subscriptions</a>
+        <a href="support.html">Support</a>
+        <a href="dashboard.html">Management</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="inner-hero small-hero">
+    <div class="container reveal active">
+      <span class="section-badge">Activation Portal</span>
+      <h1>Parking Subscriptions</h1>
+      <p>Choose your plan and activate your digital parking pass instantly.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Tab Toggles -->
+      <div class="plan-toggle reveal active" style="margin-bottom: 50px;">
+        <button class="toggle-btn active" data-tab="individual">Individual</button>
+        <button class="toggle-btn" data-tab="corporate">Corporate</button>
+      </div>
+
+      <!-- Individual Tab Content -->
+      <div id="individualTab" class="tab-content active">
+        <div class="section-title reveal active" style="text-align: left; margin-bottom: 30px;">
+          <h2 style="font-size: 1.8rem;">Select a Plan & Activate</h2>
+          <p>Choose the subscription that fits your daily commute and enter your details.</p>
+        </div>
+
+        <div class="subscription-layout">
+          
+          <!-- Left Column: Available Plans -->
+          <div class="plans-column">
+            <div class="plan-card compact selected" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <p class="plan-label">Resident/Office</p>
+                    <h3>Individual Standard</h3>
+                    <p class="small-text">Dedicated spot at 1 primary location.</p>
+                  </div>
+                  <div class="price">BDT 6,000</div>
+                </div>
+                <ul style="margin-top: 15px; list-style: none; font-size: 0.85rem;">
+                  <li style="margin-bottom: 8px;">✅ Digital Barcode Access</li>
+                  <li style="margin-bottom: 8px;">✅ Priority Entry/Exit</li>
+                  <li style="margin-bottom: 8px;">✅ 1 Selected Location</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="plan-card compact featured" style="background: linear-gradient(135deg, #0d63c9, #084b98); border: none; height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span class="most-popular" style="margin-bottom: 10px;">Most Popular</span>
+                <div style="display: flex; justify-content: space-between; align-items: center; color: white;">
+                  <div>
+                    <p class="plan-label" style="color: #b7cce9;">Multi-Site Access</p>
+                    <h3>Individual Premium</h3>
+                    <p class="small-text" style="color: #d7e6fb;">Access to all 12 DhakaPark sites.</p>
+                  </div>
+                  <div class="price" style="color: var(--secondary);">BDT 10,000</div>
+                </div>
+                <ul style="margin-top: 15px; list-style: none; font-size: 0.85rem; color: white;">
+                  <li style="margin-bottom: 8px;">✅ All 12 Locations Included</li>
+                  <li style="margin-bottom: 8px;">✅ Guaranteed Spot in Peak Hours</li>
+                  <li style="margin-bottom: 8px;">✅ 24/7 Premium Support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Activation Form -->
+          <div class="form-column">
+            <div class="form-card" style="height: 100%;">
+              <h3>Activate Subscription</h3>
+              <p class="small-text" style="margin-bottom: 20px;">Enter your details to generate your digital pass.</p>
+
+              <form class="form-grid">
+                <div class="form-group">
+                  <label>Vehicle Registration Number</label>
+                  <input type="text" placeholder="e.g. Dhaka Metro-Ga 12-3456" required>
+                </div>
+
+                <div class="form-group">
+                  <label>Primary Parking Location</label>
+                  <select required>
+                    <option value="" disabled selected>Select a location</option>
+                    <option>Gulshan-2 (Multi-level)</option>
+                    <option>Banani Road 11 (Basement)</option>
+                    <option>Dhanmondi 27 (Open-air)</option>
+                    <option>Motijheel C/A (Multi-level)</option>
+                    <option>Uttara Sector 7 (Open-air)</option>
+                    <option>Mirpur-10 (Basement)</option>
+                    <option>Farmgate (Multi-level)</option>
+                    <option>Mohammadpur (Open-air)</option>
+                    <option>Tejgaon (Basement)</option>
+                    <option>Mogbazar (Multi-level)</option>
+                    <option>Badda (Open-air)</option>
+                    <option>Malibagh (Basement)</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Mobile Number</label>
+                  <input type="text" placeholder="+880 17XX XXXXXX" required>
+                </div>
+
+                <div class="summary-box" style="margin-top: 10px;">
+                  <div>
+                    <h4 id="selectedPlanName">Standard Plan</h4>
+                    <p class="small-text">Individual · Monthly Billing</p>
+                  </div>
+                  <strong id="selectedPlanPrice" style="color: var(--primary); font-size: 1.2rem;">BDT 6,000</strong>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-btn" style="margin-top: 10px; padding: 16px;">Proceed to Payment</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Corporate Tab Content -->
+      <div id="corporateTab" class="tab-content">
+        <div class="section-title reveal" style="text-align: left; margin-bottom: 30px;">
+          <h2 style="font-size: 1.8rem;">Corporate Solutions & Inquiry</h2>
+          <p>Fleet management and reserved blocks for companies and large organizations.</p>
+        </div>
+
+        <div class="subscription-layout">
+          <!-- Corporate also follows the same 2-column pattern for consistency -->
+          <div class="plans-column">
+            <div class="plan-card compact featured" style="background: linear-gradient(135deg, #0d1b2a, #1b263b); border: none; height: 100%;">
+              <div style="display: flex; justify-content: space-between; align-items: center; color: white;">
+                <div>
+                  <p class="plan-label" style="color: #b7cce9;">Large Organizations</p>
+                  <h3>Enterprise Fleet</h3>
+                  <p class="small-text" style="color: #d7e6fb;">Volume pricing for 20+ vehicles.</p>
+                </div>
+                <div class="price" style="color: var(--secondary);">Custom</div>
+              </div>
+              <ul style="margin-top: 15px; list-style: none; font-size: 0.85rem; color: white;">
+                <li style="margin-bottom: 8px;">✅ Reserved Blocks for Staff</li>
+                <li style="margin-bottom: 8px;">✅ Monthly MIS Usage Reports</li>
+                <li style="margin-bottom: 8px;">✅ Bulk Billing & Auditing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="form-column">
+            <div class="form-card" style="height: 100%;">
+              <h3>Corporate Inquiry</h3>
+              <p class="small-text" style="margin-bottom: 20px;">Our team will contact you for volume pricing.</p>
+              <form class="form-grid">
+                <div class="form-group">
+                  <label>Company Name</label>
+                  <input type="text" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                  <label>Work Email</label>
+                  <input type="email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label>Estimated Vehicle Count</label>
+                  <input type="number" placeholder="e.g. 25" required>
+                </div>
+                <button type="submit" class="btn btn-primary full-btn">Request Quote</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DhakaPark</h3>
+        <p>Integrated Parking Information System prototype for smarter multi-site parking in Dhaka.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="dashboard.html">Management</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>support@dhakapark.com</p>
+        <p>+880 1712 345 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DhakaPark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

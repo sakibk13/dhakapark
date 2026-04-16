@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DhakaPark | Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">P</div>
+        <span>DhakaPark</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+        <a href="support.html" class="active-link">Support</a>
+        <a href="receipt.html">Receipts</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-light">Log In</a>
+        <a href="signup.html" class="btn btn-primary">Sign Up</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </div>
+  </header>
+
+  <section class="support-hero">
+    <div class="container reveal">
+      <h1>How can we help you today?</h1>
+      <div class="support-search search-box">
+        <input type="text" placeholder="Search for articles or questions...">
+        <button class="btn btn-primary search-btn">Search</button>
+      </div>
+      <div class="support-tags">
+        <span>Payment Issues</span>
+        <span>Billing History</span>
+        <span>Vehicle Damage</span>
+        <span>App Errors</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section support-section">
+    <div class="container">
+      <div class="ticket-card reveal">
+        <div class="ticket-header">
+          <h2>Submit a Support Ticket</h2>
+          <span class="response-badge">Avg. response: 2 hrs</span>
+        </div>
+
+        <form class="ticket-form">
+          <div class="two-col">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="e.g. Rafsan Uddin">
+            </div>
+
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="you@example.com">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Vehicle Registration Number</label>
+            <input type="text" placeholder="e.g. Dhaka Metro-Ga 12-3456">
+          </div>
+
+          <div class="two-col">
+            <div class="form-group">
+              <label>Issue Category</label>
+              <select>
+                <option>Select issue type</option>
+                <option>Incorrect Charge</option>
+                <option>Lost Token</option>
+                <option>Vehicle Damage</option>
+                <option>Subscription Problem</option>
+                <option>Support Request</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label>Location of Incident</label>
+              <select>
+                <option>Select location</option>
+                <option>Gulshan-2 (Multi-level)</option>
+                <option>Banani Road 11 (Basement)</option>
+                <option>Dhanmondi 27 (Open-air)</option>
+                <option>Motijheel C/A (Multi-level)</option>
+                <option>Uttara Sector 7 (Open-air)</option>
+                <option>Mirpur-10 (Basement)</option>
+                <option>Farmgate (Multi-level)</option>
+                <option>Mohammadpur (Open-air)</option>
+                <option>Tejgaon (Basement)</option>
+                <option>Mogbazar (Multi-level)</option>
+                <option>Badda (Open-air)</option>
+                <option>Malibagh (Basement)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Description</label>
+            <textarea rows="5" placeholder="Please describe the issue in detail — include date, time, and relevant context."></textarea>
+          </div>
+
+          <div class="upload-box">
+            <div>
+              <h4>Upload Photo of Receipt or Incident</h4>
+              <p>Drag & drop or browse image/PDF files</p>
+            </div>
+            <button type="button" class="btn btn-light">Browse</button>
+          </div>
+
+          <button type="submit" class="btn btn-blue full-btn">Submit Ticket</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>DhakaPark</h3>
+        <p>Structured support for billing disputes, lost tokens, and parking-related complaints.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="subscriptions.html">Subscriptions</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p><strong>Head Office:</strong> Tejgaon, Dhaka</p>
+        <p>support@dhakapark.com</p>
+        <p>+880 1712 345 678</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 DhakaPark. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
