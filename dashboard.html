@@ -90,20 +90,24 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-card">
+          <p class="small-text">Total Revenue (Today)</p>
           <h3>BDT 45,200</h3>
-          <p>Total Revenue (Today)</p>
+          <p class="small-text" style="color: #c0392b;">-2.5% Revenue Leakage Est.</p>
         </div>
         <div class="stat-card">
+          <p class="small-text">Avg. Occupancy</p>
           <h3>84%</h3>
-          <p>Avg. Occupancy</p>
+          <p class="small-text" style="color: #1ed760;">Peak: 96% at 2:00 PM</p>
         </div>
         <div class="stat-card">
+          <p class="small-text">Total Vehicles Today</p>
           <h3>1,240</h3>
-          <p>Total Vehicles Today</p>
+          <p class="small-text">92% Digital Entry / 8% Manual</p>
         </div>
         <div class="stat-card">
-          <h3>15</h3>
-          <p>Active Incidents</p>
+          <p class="small-text">Active Subscriptions</p>
+          <h3>412</h3>
+          <p>85 New this month</p>
         </div>
       </div>
 
@@ -121,27 +125,27 @@
         </div>
 
         <div class="chart-box">
-          <h3>Occupancy Analysis (Peak Hours)</h3>
+          <h3>Avg. Parking Duration (By Site Type)</h3>
           <div class="chart-placeholder">
-            <div class="bar" style="height: 30%; background: #c8d8eb;"></div>
-            <div class="bar" style="height: 50%; background: #c8d8eb;"></div>
-            <div class="bar" style="height: 90%; background: #ff5353;"></div>
-            <div class="bar" style="height: 85%; background: #ff5353;"></div>
-            <div class="bar" style="height: 40%; background: #c8d8eb;"></div>
+            <div class="bar" style="height: 85%; background: var(--primary);"></div>
+            <div class="bar" style="height: 55%; background: var(--primary);"></div>
+            <div class="bar" style="height: 35%; background: var(--primary);"></div>
           </div>
-          <p class="small-text" style="margin-top: 10px; text-align: center;">8 AM | 11 AM | 2 PM | 5 PM | 8 PM</p>
+          <p class="small-text" style="margin-top: 10px; text-align: center;">Multi-level (4.5h) | Basement (2.8h) | Open-air (1.2h)</p>
         </div>
       </div>
 
       <div class="table-container chart-box">
-        <h3>Site-to-Site Comparison (MIS Report)</h3>
+        <h3>Site-to-Site Performance Comparison (MIS Report)</h3>
+        <p class="small-text" style="margin-bottom: 15px;">Detailed breakdown of revenue, occupancy, and incident status for executive review.</p>
         <table>
           <thead>
             <tr>
               <th>Site Name</th>
-              <th>Type</th>
-              <th>Total Capacity</th>
+              <th>Site Type</th>
               <th>Revenue (Daily)</th>
+              <th>Occupancy</th>
+              <th>Incidents</th>
               <th>Status</th>
             </tr>
           </thead>
@@ -149,30 +153,42 @@
             <tr>
               <td>Gulshan Plaza</td>
               <td>Multi-level</td>
-              <td>250</td>
               <td>BDT 12,500</td>
+              <td>88%</td>
+              <td>0</td>
               <td><span class="status available-badge">Optimal</span></td>
             </tr>
             <tr>
               <td>Banani Hub</td>
               <td>Basement</td>
-              <td>100</td>
               <td>BDT 8,200</td>
+              <td>92%</td>
+              <td>1</td>
               <td><span class="status limited-badge">High Demand</span></td>
             </tr>
             <tr>
-              <td>Dhanmondi Lake</td>
+              <td>Dhanmondi 27</td>
               <td>Open-air</td>
-              <td>60</td>
               <td>BDT 4,500</td>
+              <td>65%</td>
+              <td>0</td>
               <td><span class="status available-badge">Stable</span></td>
             </tr>
             <tr>
               <td>Motijheel C/A</td>
               <td>Multi-level</td>
-              <td>300</td>
               <td>BDT 15,000</td>
+              <td>98%</td>
+              <td>3</td>
               <td><span class="status full-badge">Event Load</span></td>
+            </tr>
+            <tr>
+              <td>Tejgaon Site</td>
+              <td>Basement</td>
+              <td>BDT 5,000</td>
+              <td>74%</td>
+              <td>0</td>
+              <td><span class="status available-badge">Optimal</span></td>
             </tr>
           </tbody>
         </table>

@@ -175,3 +175,20 @@ if (supportSearchBtn && supportSearchInput) {
     }
   });
 }
+
+// Dummy Login Logic
+const loginForm = document.querySelector(".auth-form");
+if (loginForm && window.location.pathname.includes("login.html")) {
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const email = loginForm.querySelector('input[type="email"]').value;
+    const password = loginForm.querySelector('input[type="password"]').value;
+
+    if (email === "user@gmail.com" && password === "1234") {
+      alert("Login Successful! Redirecting to Management Dashboard...");
+      window.location.href = "dashboard.html";
+    } else {
+      alert("Invalid credentials. Please use:\nEmail: user@gmail.com\nPass: 1234");
+    }
+  });
+}
