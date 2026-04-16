@@ -192,3 +192,13 @@ if (loginForm && window.location.pathname.includes("login.html")) {
     }
   });
 }
+
+// Logout Logic
+const logoutBtn = document.getElementById("logoutBtn");
+if (logoutBtn) {
+  logoutBtn.addEventListener("click", () => {
+    if (confirm("Are you sure you want to log out?")) {
+      window.location.href = "login.html";
+    }
+  });
+}
